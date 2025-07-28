@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { DataBindingComponent } from '../data-binding/data-binding.component';
+import { StructuralDirectiveNgswitchVsSwitchComponent } from '../structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch.component';
 
 
 // [ngClass] Adds or removes a set of CSS classes
@@ -14,10 +15,7 @@ import { DataBindingComponent } from '../data-binding/data-binding.component';
 
 @Component({
   selector: 'KOT-directives',
-  imports: [
-    NgIf,
-    DataBindingComponent
-  ],
+  imports: [],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.scss'
 })
