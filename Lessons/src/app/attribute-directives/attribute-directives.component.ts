@@ -14,13 +14,26 @@ import { FormsModule } from '@angular/forms';
 export class AttributeDirectivesComponent {
   //1
   textColor: string = 'text-success';
+  StyleColor: string = "orange"
+
   changeColor(color: string){
     this.textColor = color;
+  }
+  updateColor(ngStyleColor: string){
+    this.StyleColor = ngStyleColor;
   }
 
   //2
   isTextGreen : boolean = false;
+  isTextOrange : boolean = false;
 
   //3
   userClass : string = '';
+
+  customClass : any = {
+    'color': 'pink',
+    'height': '150px',
+    'width': '400px',
+    'border': '1px solid black'
+  }
 }
