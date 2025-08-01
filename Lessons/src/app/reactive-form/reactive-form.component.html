@@ -5,25 +5,65 @@
 
         <div class="form-group m-2">
             <label>First Name</label>
-            <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName" required>
-
-
+            <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName">
+            @if((reactiveForm.controls['firstName']?.dirty || reactiveForm.controls['firstName']?.touched)){
+                @if(reactiveForm.controls['firstName']?.errors?.['required']){
+                <small class="text-danger">First name is required</small>
+                }
+                @if(reactiveForm.controls['firstName']?.errors?.['pattern']){
+                <small class="text-danger">First name does not math the required pattern</small>
+                }
+            }
         </div>
         <div class="form-group m-2">
             <label>Last Name</label>
             <input type="text" class="form-control" placeholder="Enter Last name" formControlName="lastName">
+            @if((reactiveForm.controls['lastName']?.dirty || reactiveForm.controls['lastName']?.touched)){
+                @if(reactiveForm.controls['lastName']?.errors?.['required']){
+                <small class="text-danger">Last name is required</small>
+                }
+                @if(reactiveForm.controls['lastName']?.errors?.['minlength']){
+                <small class="text-danger">The minimum length should be 10</small>
+                }
+            }
         </div>
         <div class="form-group m-2">
             <label>Email</label>
             <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+            @if((reactiveForm.controls['email']?.dirty || reactiveForm.controls['email']?.touched)){
+                @if(reactiveForm.controls['email']?.errors?.['required']){
+                <small class="text-danger">Email is required</small>
+                }
+                @if(reactiveForm.controls['email']?.errors?.['maxlength']){
+                <small class="text-danger">The maximum length should be 15</small>
+                }
+                @if(reactiveForm.controls['email']?.errors?.['email']){
+                <small class="text-danger">Please enter a valid email address</small>
+                }
+            }
         </div>
         <div class="form-group m-2">
             <label>Password</label>
             <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+            @if((reactiveForm.controls['password']?.dirty || reactiveForm.controls['password']?.touched)){
+                @if(reactiveForm.controls['password']?.errors?.['required']){
+                <small class="text-danger">Password is required</small>
+                }
+            }
         </div>
         <div class="form-check m-2">
             <label>Check me out</label>
             <input type="checkbox" class="form-check-input" formControlName="isChecked">
+        </div>
+
+        <div class="form-group m-2" formArrayName="skills">
+            <button class="btn btn-primary" (click)="addSkill()">Add Skill</button>
+            <div *ngFor="let skill of skills.controls; let i = index">
+                <div [formGroupName]="i">
+                    {{i+1}} Skill name : <input type="text" formControlName="skill" />
+                    <button (click)="deleteSkill(i)">Delete</button>
+                </div>
+            </div>
         </div>
 
         <div class="m-2" formGroupName="address">
@@ -42,10 +82,11 @@
             </div>
         </div>
 
+
         <button class="btn btn-success m-2" type="submit" [disabled]="reactiveForm.invalid">Submit</button>
 
         <button class="btn btn-warning m-2" (click)="setAllValues()">Set All Value</button>
         <button class="btn btn-primary m-2" (click)="setPartialValue()">Set Partial Value</button>
-        <button class="btn btn-secondary m-2" (click)="resetForm()">Reset </button> 
+        <button class="btn btn-secondary m-2" (click)="resetForm()">Reset </button>
     </form>
 </div>
