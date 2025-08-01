@@ -19,26 +19,29 @@
         </li> -->
         <li class="nav-item">
           <!-- <a class="nav-link" href="user">User</a> -->
-          <a class="nav-link" routerLink="user">User</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="user">User</a>
         </li>
         <li class="nav-item">
-          <!-- <a class="nav-link" href="/data-binding/">Data-Binding</a> -->
-          <a class="nav-link" routerLinkActive="active" routerLink="/data-binding/">Data-Binding</a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'profile/'">Profile</a>
+        </li>
+        <!-- <a class="nav-link" href="/data-binding/">Data-Binding</a> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'data-binding/'">Data-Binding</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'structural-directive-ngif-vs-if/'">Structural-Directive</a>
+          <a class="nav-link"  routerLinkActive="active" [routerLink]="'structural-directive-ngif-vs-if/'">Structural-Directive</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="attribute-directives/">Attribute-Directive</a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'attribute-directives/'">Attribute-Directive</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'built-in-pipes/'">Built-in-Pipes</a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'built-in-pipes/'">Built-in-Pipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'tdf/'">TDF</a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'tdf/'">TDF</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'rf'">Reactive Form</a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="'rf'">Reactive Form</a>
         </li>
         <!-- <li class="nav-item dropdown"> -->
           <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

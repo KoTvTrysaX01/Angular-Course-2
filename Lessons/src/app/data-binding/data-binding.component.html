@@ -1,4 +1,14 @@
 <div align="center">
+
+    @if(this.isEligible){
+        <h4 class="text-success">You are eligible for a premium subscription!</h4>
+    }@else {
+        <h4 class="text-danger">You are not eligible for a premium subscription.</h4>
+    }
+
+    <h2>User Name: {{dummyData.name}}</h2>
+
+
     <h4>One Way Data Binding</h4>
     <div>
         <p>1. Interpolation</p>
