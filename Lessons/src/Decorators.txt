@@ -1,0 +1,15 @@
+Class Decorators:
+Class decorators are applied to classes to modify their behavior.
+e.g.: @Component(), @Pipe(), @Injectable()...
+
+Property Decorators:
+Property decorators are applied to class properties and are commonly used to modify properties within classes.
+e.g.: @Input(), @Output(), @ViewChild()...
+
+Method Decorators:
+Method decorators are applied to class methods and modify their behavior.
+e.g.: @HostListener()...
+
+Parameter Decorators:
+Parameter decorators are used for parameters inside class contructors and provide additional information about constructor parameters.
+e.g.: @Inject()...

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'KOT-reusable',
@@ -8,5 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ReusableComponent {
 
-  @Input()childProperty : string = "Hello All : Welcome to FED Learning"
+  @Input()childProperty : string = "Hello All : Welcome to FED Learning";
+
+  @HostListener('click')
+  onClick(){
+    console.log("Button clicked");
+  }
 }

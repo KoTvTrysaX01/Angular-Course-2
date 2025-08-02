@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CrudService } from '../crud.service';
 import { IUser } from '../i-user';
 import { CommonModule } from '@angular/common';
@@ -19,7 +19,8 @@ export class CRUDComponent implements OnInit{
   parentProperty : string = "CRUD Operations : Kindly find all users";
 
   apiData: IUser[] = [];
-  constructor(private crud: CrudService, private router : Router) { }
+  // @Inject(CrudService)
+  constructor( private crud: CrudService, private router : Router) { }
 
   ngOnInit(): void {
     this.getAllData();
