@@ -8,6 +8,10 @@ import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CRUDComponent } from './crud/crud.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 
 // Default route must be defined first
 // Wildcard route must be defined last
@@ -22,7 +26,10 @@ export const routes: Routes = [
     {path: 'attribute-directive', component: AttributeDirectivesComponent},
     {path: 'built-in-pipes', component: BuiltInPipesComponent},
     {path: 'tdf', component: TemplateDrivenFormComponent},
+    {path: 'crud', component: CRUDComponent},
+    {path: 'adduser', component: AddUserComponent},
+    {path: 'updateuser/:id', component: UpdateUserComponent},
+    {path: 'viewuser/:id', component: ViewUserComponent},
     {path: 'rf', component: ReactiveFormComponent},
-    
     {path: '**', component: PageNotFoundComponent}
 ];

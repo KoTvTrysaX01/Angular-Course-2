@@ -1,0 +1,22 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "Vadim",
+      "username": "KoTvTrysaX",
+      "email": "Vadim@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Danila",
+      "username": "TheKingOfEvil",
+      "email": "Danila@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Nastya",
+      "username": "FarenJeter",
+      "email": "Nastya@gmail.com"
+    }
+  ]
+}
