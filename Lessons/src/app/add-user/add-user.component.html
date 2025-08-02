@@ -1,5 +1,6 @@
-<div class="container">
-    <form class="w-75 p-5 mt-5 mx-auto bg-info" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+<div class="container w-75">
+    <KOT-reusable [childProperty]="parentProperty"></KOT-reusable>
+    <form class=" p-5 mt-5 mx-auto bg-info" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
         <h2 class="text-center m-4">Add User</h2>
 
         <div class="form-group m-3">

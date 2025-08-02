@@ -9,6 +9,7 @@ import { StructuralDirectiveNgswitchVsSwitchComponent } from "./structural-direc
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { SignalsComponent } from "./signals/signals.component";
 import { LinkedSignalComponent } from "./linked-signal/linked-signal.component";
+import { ReusableComponent } from "./reusable/reusable.component";
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,8 @@ import { LinkedSignalComponent } from "./linked-signal/linked-signal.component";
     // AttributeDirectivesComponent,
     // SignalsComponent,
     // LinkedSignalComponent,
+    ,
+    ReusableComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

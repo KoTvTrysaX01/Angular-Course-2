@@ -2,16 +2,20 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CrudService } from '../crud.service';
+import { ReusableComponent } from "../reusable/reusable.component";
 
 @Component({
   selector: 'KOT-add-user',
   imports: [
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    ReusableComponent
+],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss'
 })
 export class AddUserComponent {
+
+  parentProperty : string = "Add-User : Kindly add the user details";
 
 
   addUserForm : FormGroup;

@@ -13,25 +13,27 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { ResourceApiComponent } from './resource-api/resource-api.component';
+import { ReusableComponent } from './reusable/reusable.component';
 
 // Default route must be defined first
 // Wildcard route must be defined last
 
 export const routes: Routes = [
     // {path: '', component: UserComponent},
-    {path: '', redirectTo: 'user', pathMatch: 'full'},
-    {path: 'user', component: UserComponent},
-    {path: 'profile', component: ProfileComponent},
-    {path: 'data-binding', component: DataBindingComponent},
-    {path: 'structural-directive', component: StructuralDirectiveNgifVsIfComponent},
-    {path: 'attribute-directive', component: AttributeDirectivesComponent},
-    {path: 'built-in-pipes', component: BuiltInPipesComponent},
-    {path: 'tdf', component: TemplateDrivenFormComponent},
-    {path: 'crud', component: CRUDComponent},
-    {path: 'adduser', component: AddUserComponent},
-    {path: 'updateuser/:id', component: UpdateUserComponent},
-    {path: 'viewuser/:id', component: ViewUserComponent},
-    {path: 'rf', component: ReactiveFormComponent},
-    {path: 'resourceapi', component: ResourceApiComponent},
-    {path: '**', component: PageNotFoundComponent}
+    { path: '', redirectTo: 'user', pathMatch: 'full' },
+    { path: 'user', component: UserComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: 'data-binding', component: DataBindingComponent },
+    { path: 'structural-directive', component: StructuralDirectiveNgifVsIfComponent },
+    { path: 'attribute-directive', component: AttributeDirectivesComponent },
+    { path: 'built-in-pipes', component: BuiltInPipesComponent },
+    { path: 'tdf', component: TemplateDrivenFormComponent },
+    { path: 'crud', component: CRUDComponent },
+    { path: 'adduser', component: AddUserComponent },
+    { path: 'updateuser/:id', component: UpdateUserComponent },
+    { path: 'viewuser/:id', component: ViewUserComponent },
+    { path: 'rf', component: ReactiveFormComponent },
+    { path: 'resourceapi', component: ResourceApiComponent },
+    { path: 'reusable', component: ReusableComponent },
+    { path: '**', component: PageNotFoundComponent }
 ];

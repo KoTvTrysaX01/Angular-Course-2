@@ -3,16 +3,20 @@ import { CrudService } from '../crud.service';
 import { IUser } from '../i-user';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ReusableComponent } from "../reusable/reusable.component";
 
 @Component({
   selector: 'KOT-crud',
   imports: [
-    CommonModule
-  ],
+    CommonModule,
+    ReusableComponent
+],
   templateUrl: './crud.component.html',
   styleUrl: './crud.component.scss'
 })
 export class CRUDComponent implements OnInit{
+
+  parentProperty : string = "CRUD Operations : Kindly find all users";
 
   apiData: IUser[] = [];
   constructor(private crud: CrudService, private router : Router) { }

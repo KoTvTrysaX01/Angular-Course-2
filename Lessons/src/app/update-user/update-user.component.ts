@@ -2,14 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../crud.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ReusableComponent } from "../reusable/reusable.component";
 
 @Component({
   selector: 'KOT-update-user',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ReusableComponent],
   templateUrl: './update-user.component.html',
   styleUrl: './update-user.component.scss'
 })
 export class UpdateUserComponent implements OnInit{
+
+  parentProperty : string = "Update-User : Kindly update the user details";
 
   updateUserForm : FormGroup
 
