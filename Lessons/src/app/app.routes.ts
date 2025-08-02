@@ -12,6 +12,7 @@ import { CRUDComponent } from './crud/crud.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+import { ResourceApiComponent } from './resource-api/resource-api.component';
 
 // Default route must be defined first
 // Wildcard route must be defined last
@@ -31,5 +32,6 @@ export const routes: Routes = [
     {path: 'updateuser/:id', component: UpdateUserComponent},
     {path: 'viewuser/:id', component: ViewUserComponent},
     {path: 'rf', component: ReactiveFormComponent},
+    {path: 'resourceapi', component: ResourceApiComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
