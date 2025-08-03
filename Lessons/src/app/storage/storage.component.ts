@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+// import { CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'KOT-storage',
@@ -9,8 +10,11 @@ import { Component } from '@angular/core';
 })
 export class StorageComponent {
 
+  // constructor(private cookie : CookieService){}
+
   sessionValue : string = "";
   localValue : string = "";
+  cookieValue : string = "";
 
   setSession(){
     sessionStorage.setItem('name', 'session');
@@ -48,5 +52,18 @@ export class StorageComponent {
   clearLocal(){
     localStorage.clear();
     this.localValue = "";
+  }
+
+  setCookie(){
+    // this.cookie.set('token1', '12345', 1);
+    // this.cookie.set('token2', 'xyz');
+  }
+
+  getCookie(){
+    // cookieValue = this.cookie.get('token1')
+  }
+  deleteCookie(){
+    // this.cookie.delete('token1');
+    // this.cookieValue = "";
   }
 }
