@@ -14,6 +14,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { ResourceApiComponent } from './resource-api/resource-api.component';
 import { ReusableComponent } from './reusable/reusable.component';
+import { ParentComponent } from './parent/parent.component';
 
 // Default route must be defined first
 // Wildcard route must be defined last
@@ -35,5 +36,6 @@ export const routes: Routes = [
     { path: 'rf', component: ReactiveFormComponent },
     { path: 'resourceapi', component: ResourceApiComponent },
     { path: 'reusable', component: ReusableComponent },
+    { path: 'parent', component: ParentComponent},
     { path: '**', component: PageNotFoundComponent }
 ];
