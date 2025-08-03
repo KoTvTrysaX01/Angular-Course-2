@@ -15,6 +15,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { ResourceApiComponent } from './resource-api/resource-api.component';
 import { ReusableComponent } from './reusable/reusable.component';
 import { ParentComponent } from './parent/parent.component';
+import { StorageComponent } from './storage/storage.component';
 
 // Default route must be defined first
 // Wildcard route must be defined last
@@ -37,5 +38,6 @@ export const routes: Routes = [
     { path: 'resourceapi', component: ResourceApiComponent },
     { path: 'reusable', component: ReusableComponent },
     { path: 'parent', component: ParentComponent},
+    { path: 'storage', component: StorageComponent},
     { path: '**', component: PageNotFoundComponent }
 ];
